@@ -69,7 +69,6 @@ class TaskController extends Controller
     {
         $task = Task::find($id);
         $validatedRequest = $request->all();
-        dd($validatedRequest);
         if($task) {
             if($task->update($validatedRequest)) {
                 return $this->apiResponse(200, 'success', []);
